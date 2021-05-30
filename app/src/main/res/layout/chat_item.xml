@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/cardview"
+        android:background="#ffffff"
+        android:layout_marginEnd="70dp"
+        android:padding="10dp"
+        android:layout_marginRight="70dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="start"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/name"
+                    android:text="teacherName"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="end"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:id="@+id/dateAndTime"
+                    android:text="12/02/2021\n09:30"
+                    >
+
+                </TextView>
+
+            </LinearLayout>
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/filelayout"
+                app:cardCornerRadius="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/filetype"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_pdf"
+                            >
+                        </ImageView>
+
+                    </LinearLayout>
+
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:text="hghjgjgjg"
+                        android:padding="5dp"
+                        android:background="#D3D0D0"
+                        android:id="@+id/filename"
+                        android:gravity="center_vertical"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        >
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <Button
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/download"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_download"
+                            >
+                        </Button>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:padding="5dp"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/image_display"
+                >
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:id="@+id/message"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="5dp"
+                    android:text="This is a dummy message given by the teacher....dfjhf..dfhkjhdfbj"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="start"
+        android:padding="5dp"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeOfmsg2"
+            android:text="8:30"
+            android:maxLength="5"
+            android:padding="5dp"
+            >
+        </TextView>
+    </LinearLayout>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:id="@+id/cardview2"
+        app:cardBackgroundColor="#3F51B5"
+        android:layout_marginStart="70dp"
+        android:padding="10dp"
+        android:layout_marginLeft="70dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="start"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/name2"
+                    android:textColor="#fff"
+                    android:text="teacherName"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="end"
+                    android:textColor="#fff"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginRight="2dp"
+                    android:id="@+id/dateAndTime2"
+                    android:text="12/02/2021\n09:30"
+                    >
+
+                </TextView>
+
+            </LinearLayout>
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/filelayout2"
+                app:cardCornerRadius="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="5"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/filetype2"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_pdf"
+                            >
+                        </ImageView>
+
+                    </LinearLayout>
+
+
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:text="hghjgjgjg"
+                        android:padding="5dp"
+                        android:background="#D3D0D0"
+                        android:id="@+id/filename2"
+                        android:gravity="center_vertical"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        >
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <Button
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:id="@+id/download2"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_download"
+                            >
+                        </Button>
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/image_display2"
+                >
+            </ImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:id="@+id/message2"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="5dp"
+                    android:text="This is a dummy message given by the teacher....dfjhf..dfhkjhdfbj"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginEnd="5dp">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end"
+        android:padding="5dp"
+        >
+
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:id="@+id/seen"
+            android:src="@drawable/ic_unseen"
+            android:visibility="gone"
+            >
+        </ImageView>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:visibility="gone"
+            android:id="@+id/seen2"
+            android:src="@drawable/ic_unseen"
+            >
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeOfmsg"
+            android:text="8:30"
+            android:maxLength="5"
+            android:padding="5dp"
+            >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

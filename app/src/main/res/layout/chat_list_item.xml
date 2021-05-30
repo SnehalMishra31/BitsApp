@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AAA9A9"
+        android:orientation="vertical"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="top"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AAA9A9"
+        android:orientation="vertical"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="bottom"
+        >
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image_item"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:clickable="true"
+            android:layout_gravity="start"
+            android:src="@drawable/profileicon"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:padding="5dp"
+                android:layout_gravity="start"
+                >
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0dp"
+                    android:id="@+id/profile_name_item"
+                    android:text="Name of Student nnnnnnnnnnnnnnnnnnnnnnnnnnnn"
+                    android:textColor="#000"
+                    android:padding="3dp"
+                    android:textAlignment="textStart"
+                    android:gravity="start"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_vertical"
+                    >
+
+                </TextView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/last_message"
+                    android:textAlignment="textStart"
+                    android:text="this is last msg"
+                    android:fontFamily="sans-serif"
+                    android:gravity="start"
+                    android:maxLines="1"
+                    android:padding="3dp"
+                    android:textStyle="normal"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    >
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_gravity="center_vertical|end"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yesterday"
+            android:id="@+id/date"
+            android:visibility="visible"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"
+            >
+        </TextView>
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/notification_circle"
+            android:text="1"
+            android:visibility="visible"
+            android:id="@+id/number_of_notifications"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            >
+        </TextView>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "134627111936",
+    "project_id": "bitsapp-6d742",
+    "storage_bucket": "bitsapp-6d742.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:134627111936:android:492e5b2b15bbde5ce454e5",
+        "android_client_info": {
+          "package_name": "com.rawtalent.bitsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "134627111936-fj961e7p8s4nnoe4gds8vnhoulu0fa6v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA55-R2iPSPcQoHRW8Yzs-u2AFx6xvz4MA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "134627111936-fj961e7p8s4nnoe4gds8vnhoulu0fa6v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
