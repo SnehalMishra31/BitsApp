@@ -12,7 +12,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:background="@color/design_default_color_primary"
-      android:padding="5dp"
+      android:padding="3dp"
       android:orientation="horizontal">
 
       <TextView
@@ -20,7 +20,7 @@
           android:layout_height="wrap_content"
           android:text="BitsApp"
           android:textColor="#fff"
-          android:textSize="25sp"
+          android:textSize="22sp"
           android:layout_marginStart="5dp"
           android:layout_marginLeft="5dp"
           android:textStyle="bold"
@@ -34,7 +34,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tabLayout"
-        app:tabIndicatorColor="@color/design_default_color_primary"
+        android:background="@color/design_default_color_primary"
+        app:tabIndicatorColor="#ffffff"
+        app:tabTextColor="#fff"
         app:tabIndicatorHeight="2dp"
         app:tabMode="fixed"
         app:tabGravity="fill">

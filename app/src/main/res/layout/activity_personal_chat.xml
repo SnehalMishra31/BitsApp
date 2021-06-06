@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chatbgimage"
+    tools:context=".PersonalChat">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/action_view"
+            android:orientation="horizontal"
+            android:background="#3F51B5"
+            android:padding="5dp"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/profileicon"
+                android:id="@+id/profileicon"
+                >
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:text="Group Name"
+                android:id="@+id/profileName"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                >
+            </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="typing..."
+                    android:visibility="gone"
+                    android:id="@+id/typing"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="14sp"
+                    android:textColor="#ffffff"
+                    android:textStyle="italic"
+                    android:gravity="center_vertical"
+                    >
+                </TextView>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="60dp"
+
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatrecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/selectfilelayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="80dp"
+        >
+
+        <ImageButton
+            android:id="@+id/pdf"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circularbutton"
+            android:padding="5dp"
+            android:src="@drawable/ic_pdf"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/circularbutton"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_image"></ImageButton>
+    </LinearLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+
+        >
+
+
+        <LinearLayout
+            android:id="@+id/fileshowlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EDAE50"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageButton
+                android:id="@+id/cancelfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circularbutton"
+                android:padding="5dp"
+                android:src="@drawable/ic_cancel"></ImageButton>
+
+            <TextView
+                android:id="@+id/filenametv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textColor="#ffffff"></TextView>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/attachfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circularbutton"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_attach"></ImageButton>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/message_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_green"
+                    android:hint="type a message"
+                    android:maxHeight="100dp"
+                    android:padding="15dp"
+                    android:textSize="18sp">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <ImageButton
+                    android:id="@+id/sendbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circularbutton"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_send"></ImageButton>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

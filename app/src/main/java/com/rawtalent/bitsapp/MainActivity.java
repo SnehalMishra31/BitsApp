@@ -1,30 +1,32 @@
 package com.rawtalent.bitsapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.util.Log;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.rawtalent.chatencryption.AssymetricEncryption;
 import com.rawtalent.chatencryption.UserKeys;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn;
-    EditText editText;
-
-    byte[] arr;
 
     TabLayout mTabLayout;
     ViewPager mViewPager;
 
-    boolean en=false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,49 +38,12 @@ public class MainActivity extends AppCompatActivity {
         setupViewPager(mViewPager);
         mTabLayout.setupWithViewPager(mViewPager);
 
-
-        UserKeys userKeys= null;
-        try {
-            userKeys = AssymetricEncryption.createUserKeys();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        UserKeys finalUserKeys = userKeys;
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                en=!en;
-
-                if (en){
-                    String msg=editText.getText().toString();
-                    if (!msg.equals("")){
-                        String str= null;
-                        try {
-                            arr=AssymetricEncryption.encryptMessage(msg, finalUserKeys.getPublicKey());
-                            str = Arrays.toString(arr);
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                        editText.setText(""+str);
-                    }
-                }else{
-
-                    try {
-                        editText.setText(AssymetricEncryption.decryptMessage(arr,finalUserKeys.getPrivateKey()));
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
-                }
-            }
-        });
     }
 
     private void setupViewPager(ViewPager mViewPager) {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-        viewPagerAdapter.addFragment(new PersonalChat(MainActivity.this), "Friends");
-        viewPagerAdapter.addFragment(new GroupChat(MainActivity.this), "Groups");
+        viewPagerAdapter.addFragment(new PersonalChatListFragment(MainActivity.this), "Friends");
+        viewPagerAdapter.addFragment(new GroupChatListFragment(MainActivity.this), "Groups");
         mViewPager.setAdapter(viewPagerAdapter);
     }
 

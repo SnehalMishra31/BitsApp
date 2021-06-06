@@ -3,12 +3,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PersonalChat">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PersonalChatListFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/emptyview"
+        android:visibility="gone"
+        android:orientation="vertical"
+        >
+       <ImageView
+           android:layout_width="300dp"
+           android:layout_height="300dp"
+           android:src="@drawable/nochatfound"
+           android:layout_gravity="center_horizontal"
+           >
+       </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="No Chats"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            >
+        </TextView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/recyclerview"
+        android:visibility="visible"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
 
+
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_add"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/getcontacts">
+    </Button>
 </FrameLayout>

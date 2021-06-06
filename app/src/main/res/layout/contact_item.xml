@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_check"
+        android:layout_gravity="bottom"
+        android:id="@+id/checkmark"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        >
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/profileicon"
+        >
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name of Contact"
+            android:textColor="#000"
+            android:id="@+id/namecontact"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textSize="18sp"
+            >
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+91889889889"
+            android:padding="5dp"
+            android:id="@+id/numbercontact"
+            android:textSize="18sp"
+            >
+        </TextView>
+    </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

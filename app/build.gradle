@@ -14,6 +14,7 @@ android {
         versionCode 1
         versionName "1.0"
 
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -41,6 +42,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     implementation 'com.github.SnehalMishra31:bitsApp:v1.0'
+
+    //Picasso library for loading and Presenting Images
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'

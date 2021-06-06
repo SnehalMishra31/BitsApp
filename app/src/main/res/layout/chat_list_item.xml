@@ -3,35 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
     >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#AAA9A9"
-        android:orientation="vertical"
-        android:layout_marginStart="85dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_gravity="top"
-        >
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#AAA9A9"
-        android:orientation="vertical"
-        android:layout_marginStart="85dp"
-        android:layout_marginLeft="85dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_gravity="bottom"
-        >
-
-    </LinearLayout>
 
 
 
@@ -125,11 +100,9 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="#ffffff"
-        android:paddingStart="10dp"
-        android:paddingLeft="10dp"
+        android:background="#fff"
         android:layout_gravity="center_vertical|end"
         >
 
@@ -142,7 +115,7 @@
             android:gravity="center"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
-            android:padding="5dp"
+            android:padding="10dp"
             android:textStyle="bold"
             android:textSize="14sp"
             android:layout_gravity="center_horizontal"
@@ -156,7 +129,7 @@
             android:text="1"
             android:visibility="visible"
             android:id="@+id/number_of_notifications"
-            android:textColor="#ffffff"
+            android:textColor="#fff"
             android:gravity="center"
             android:layout_marginEnd="5dp"
             android:layout_marginRight="5dp"
@@ -167,4 +140,31 @@
         </TextView>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AAA9A9"
+        android:orientation="vertical"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="top"
+        >
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AAA9A9"
+        android:orientation="vertical"
+        android:layout_marginStart="85dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_gravity="bottom"
+        >
+
+    </LinearLayout>
 </FrameLayout>
