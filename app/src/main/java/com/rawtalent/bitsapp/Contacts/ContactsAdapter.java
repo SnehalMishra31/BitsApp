@@ -159,7 +159,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
         long timeInLong=date.getTime();
 
         FirebaseAuth auth=FirebaseAuth.getInstance();
-        String chatRoomID=auth.getCurrentUser().getPhoneNumber()+contactModel.getNumber();
+        String chatRoomID=generateChatID(auth.getCurrentUser().getPhoneNumber(),contactModel.getNumber());
 
         Contacts contacts=new Contacts();
         contacts.setNumber(auth.getCurrentUser().getPhoneNumber());
@@ -230,6 +230,28 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.Contac
         }
         return builder;
 
+    }
+
+    public String generateChatID(String num1,String num2){
+
+        String n1=num1;
+        String n2=num2;
+
+        if (num1.charAt(0)=='+'){
+            num1=num1.substring(1);
+        }
+
+        if (num2.charAt(0)=='+'){
+            num2=num2.substring(1);
+        }
+
+        long number1= Long.parseLong(num1);
+        long number2= Long.parseLong(num2);
+
+        if (number1>number2){
+            return ""+n1+""+n2;
+        }
+        return ""+n2+""+n1;
     }
 
 }
