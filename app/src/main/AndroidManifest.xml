@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BitsApp">
-        <activity android:name=".ShowImage"></activity>
+        <activity android:name=".GroupInformation"></activity>
+        <activity android:name=".ShowImage" />
         <activity android:name=".CreateGroup" />
         <activity
             android:name=".PersonalChat"

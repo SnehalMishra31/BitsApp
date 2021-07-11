@@ -1,9 +1,11 @@
 package com.rawtalent.bitsapp;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -13,6 +15,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -295,24 +299,34 @@ public class PersonalChatListFragment extends Fragment {
 
     public String getContactName(String number){
 
-        ContentResolver contentResolver=mContext.getContentResolver();
-        Uri uri=Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI,Uri.encode(number));
-        Cursor cursor=contentResolver.query(uri,new String[]{ContactsContract.PhoneLookup.DISPLAY_NAME},null,null,null);
+        try {
 
-        if (cursor==null){
-            return null;
-        }
-        String name=null;
 
-        if (cursor.moveToFirst()){
-            name=cursor.getString(cursor.getColumnIndex(ContactsContract.PhoneLookup.DISPLAY_NAME));
-        }
-        if (cursor!=null && !cursor.isClosed()){
-            cursor.close();
-        }
+            ContentResolver contentResolver = mContext.getContentResolver();
+            Uri uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(number));
+            Cursor cursor = contentResolver.query(uri, new String[]{ContactsContract.PhoneLookup.DISPLAY_NAME}, null, null, null);
 
-        return name;
+            if (cursor == null) {
+                return null;
+            }
+            String name = null;
+
+            if (cursor.moveToFirst()) {
+                name = cursor.getString(cursor.getColumnIndex(ContactsContract.PhoneLookup.DISPLAY_NAME));
+            }
+            if (cursor != null && !cursor.isClosed()) {
+                cursor.close();
+            }
+
+
+            return name;
+
+        }catch (Exception e){
+            return number;
+        }
     }
+
+
 
 
 }

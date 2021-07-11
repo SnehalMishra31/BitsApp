@@ -325,6 +325,7 @@ public class GroupChat extends AppCompatActivity {
         mrecyclerview.setAdapter(firestoreRecyclerAdapter);
 
 
+
         fileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -382,8 +383,10 @@ public class GroupChat extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-             //  Intent intent=new Intent(GroupChat.this,GroupData.class);
-             //  startActivity(intent);
+                Toast.makeText(GroupChat.this, "changing activity", Toast.LENGTH_SHORT).show();
+               Intent intent=new Intent(GroupChat.this,GroupInformation.class);
+               intent.putExtra("groupID",groupID);
+               startActivity(intent);
             }
         });
 
